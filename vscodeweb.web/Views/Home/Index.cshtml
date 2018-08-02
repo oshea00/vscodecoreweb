@@ -1,0 +1,19 @@
+@model vscodeweb.web.ViewModels.TodoVM
+@{
+    var title = ViewData["title"];
+}
+<html>
+    <head>
+        <title>@title</title>
+    </head>
+    <body>
+        <h1>Home</h1>
+        <ul>
+           @foreach (var x in Model.Todos)
+           {
+               <li>@x.Description</li>
+           }
+          </ul>
+    </body>
+</html>
+
